@@ -1,32 +1,8 @@
-// import axios from 'axios';
-
-// const apiUrl = "https://localhost:5030"
-
-// export default {
-//   getTasks: async () => {
-//     const result = await axios.get(`${apiUrl}/items`)    
-//     return result.data;
-//   },
-
-//   addTask: async(name)=>{
-//     console.log('addTask', name)
-//     //TODO
-//     return {};
-//   },
-
-//   setCompleted: async(id, isComplete)=>{
-//     console.log('setCompleted', {id, isComplete})
-//     //TODO
-//     return {};
-//   },
-
-//   deleteTask:async()=>{
-//     console.log('deleteTask')
-//   }
-// };
 import axios from 'axios';
 
-const apiUrl = "http://localhost:5030";
+// const apiUrl = Api.env.REACT_APP_API_URL || "http://localhost:5030";
+const apiUrl = process.env.REACT_APP_API_URL || "https://todoapi-sl0z.onrender.com";
+
 
 // יצירת מופע axios עם baseURL
 const api = axios.create({
